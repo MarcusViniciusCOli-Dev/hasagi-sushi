@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Kaushan+Script&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+:root{
+    --marcala2: #470110;
+    --marcala: #590c1b;
+    --creme: #ede5cf;
+    --branco: #ffffff;
+    --preto: #000000;
+    --vermelho: #C11B1B;
+    --transparente:#00000000;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--marcala);
+}
+
+.container {
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 95%;
+    height: 90vh;
+    background: url(img/bonsai2.jpg);
+    background-size: cover;
+}
+
+.title{
+    color: var(--preto);
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+    justify-content: center;
+    height: 100vh;
+}
+
+.input_login{
+    background-color: var(--transparente);
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid var(--marcala);
+    outline: 0;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.input_login:focus, .input_login:valid {
+    border-bottom: 2px solid var(--marcala2);
+}
+
+.entrar{
+    border-radius: 10px;
+    background-color: var(--vermelho);
+    color: var(--branco);
+    width: 35%;
+    height: 40px;
+    font-size: 20px;
+    border: none;
+    margin: 30px;
+}
+
+.logo{
+    width: 10em;
+    height: 10em;
+}
+
+.logo_space{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 35%;
+
+}
+
+.title{
+    font-family: 'Kaushan Script', cursive;
+    font-size: 3em;
+
+}
+
+.inputs {
+    margin: 30px 0;
+    width: 100%;
+}
+
+.esqueceu {
+    color: #C11B1B;
+    font-size: 0.75em;
+    text-decoration: none;
+}
+
+.n_conta{
+    color: #C11B1B;
+    font-size: 0.75em;
+    text-decoration: none;
+    margin: 10px;
+}
