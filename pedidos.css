@@ -1,0 +1,450 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Kaushan+Script&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+:root{
+    --marcala3: #793434;
+    --marcala2: #470110;
+    --marcala: #590c1b;
+    --creme: #ede5cf;
+    --creme2: #dfd1aa;
+    --branco: #ffffff;
+    --preto: #000000;
+    --vermelho: #C11B1B;
+    --transparente:#00000000;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--creme);
+    
+}
+
+.comanda::-webkit-scrollbar {
+    width: 10px;
+    height: 3px; /* A altura só é vista quando a rolagem é horizontal */
+    
+  }
+  
+  .comanda::-webkit-scrollbar-track {
+    background: transparent;
+    padding: 2px;
+
+  }
+  
+  .comanda::-webkit-scrollbar-thumb {
+    background-color: var(--creme2);
+    border-radius: 5px;
+  }
+
+
+  body::-webkit-scrollbar {
+    margin-left: 3px;
+    width: 10px;
+    height: 3px; /* A altura só é vista quando a rolagem é horizontal */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: transparent;
+    padding: 2px;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: var(--marcala2);
+  }
+
+.comanda{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--marcala);
+    width: 33%;
+    height: 100vh;
+    background-size: cover;
+    position: fixed;
+    overflow-y: scroll;
+}
+
+.title_comanda{
+    color: var(--creme);
+    font-family: 'Kaushan Script', cursive;
+    font-size: 3em;
+}
+
+.title_cardapio{
+    color: var(--preto);
+    font-family: 'Kaushan Script', cursive;
+    font-size: 3em;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    width: 85%;
+    justify-content:flex-start;
+}
+
+.mesa, .hora, .valor{
+    background-color: var(--transparente);
+    width: 50%;
+    border: 0;
+    border-bottom: 1px solid var(--creme);
+    outline: 0;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--creme);
+}
+
+.cliente{
+    background-color: var(--transparente);
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid var(--creme);
+    outline: 0;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--creme);
+}
+
+.input_login::placeholder{
+    color: var(--creme);
+}
+
+.form_hasagi{
+    display: flex;
+    flex-direction: row;
+}
+
+.entrar{
+    border-radius: 10px;
+    background-color: var(--vermelho);
+    color: var(--branco);
+    width: 35%;
+    height: 40px;
+    font-size: 20px;
+    border: none;
+    margin: 30px;
+}
+
+.title{
+    font-family: 'Kaushan Script', cursive;
+    font-size: 3em;
+
+}
+
+.inputs {
+    margin: 30px 0;
+    width: 100%;
+}
+
+.cardapio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 67%;
+    position: absolute;
+    right: 1px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    width: 260px;
+    background-color: var(--marcala2);
+    color: var(--creme);
+    height: 300px;
+    margin: 30px;
+    box-shadow: 4px 4px 2px 1px rgba(0, 0, 0, 0.15);
+}
+
+.btn_card{
+    background-color: var(--marcala3);
+    color: var(--creme);
+    border: none;
+    border-radius: 5px;
+    width: 150px;
+    height: 30px;
+}
+
+.img_card1{
+    width: 70%;
+    height: 50%;
+}
+.img_card5{
+    width: 65%;
+    height: 50%;
+}
+.img_card8{
+    width: 70%;
+    height: 50%;
+}
+.img_card11{
+    width: 75%;
+    height: 50%;
+    padding-right: 20px;
+}
+.img_card13{
+    width: 80%;
+    height: 50%;
+}
+.img_card14{
+    width: 60%;
+    height: 50%;
+    padding-left: 10px;
+}
+.img_card16{
+    width: 45%;
+    height: 50%;
+}
+.img_card20{
+    width: 80%;
+    height: 50%;
+    padding-bottom: 10px;
+}
+.img_card{
+    width: 50%;
+    height: 50%;
+}
+
+.content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.envio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.btn_enviar{
+    background-color: var(--creme);
+    color: var(--marcala3);
+    border: none;
+    margin: 10px;
+    border-radius: 5px;
+    width: 50%;
+    height: 60%;
+    font-size: x-large;
+}
+
+.preco {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 5px;
+}
+
+.btn_enviar:hover {
+    transform: scale(1.02);
+    transition: 0.2s;
+  }
+
+  .btn_card:hover {
+    transform: scale(1.02);
+    transition: 0.2s;
+  }
+
+.comidas{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 50px;
+  }
+
+  .bebidas{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 50px;
+  }
+
+.valor{
+    display: flex;
+    flex-direction: row;
+    align-items:flex-start;
+    justify-content:flex-start;
+    width: 50%;
+  }
+
+  .nome{
+    margin-top: 5px;
+  }
+  
+  .btnRemove{
+    background-color: var(--creme);
+    color: var(--marcala3);
+    border: none;
+    margin: 10px;
+    border-radius: 5px;
+    width: 50%;
+    height: 60%;
+    font-size: medium;
+  }
+
+  .produto{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .textoRemove{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .imgQuant{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+
+  }
+
+  .quantidade{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 10%;
+    padding-left: 10%;
+  }
+
+  .mais{
+    width: 50px;
+    height: 50px;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .menos{
+    width:50px;
+    height:11px;
+    padding-left: 9%;
+    padding-right: 5%;
+  }
+
+  .numero{
+    width: 2%;
+    color: var(--creme);
+
+  }
+
+  .comanda_img{
+    margin-left: 10%;
+  }
+  
+  .textoRemove{
+    width: 40%;
+  }
+
+  .btnRemove{
+    margin-top:26% ;
+    width: 100px;
+    height: 30px;
+  }
+
+  .nomeComanda{
+    color: var(--creme);
+    margin-top: 15%;
+    padding-right: 80%;
+  }
+
+  .precoComanda{
+    color: var(--creme);
+  }
+
+.modal{
+    width: 500px;
+    height: 500px;
+    background-color: var(--marcala);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    animation: animate;
+    animation-duration: 600ms;
+    z-index: 9999;
+    border-radius: 10px;
+    overflow-y: scroll;
+    
+}
+
+.contentModal{
+    color: var(--creme);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.enviar{
+    background-color: var(--marcala3);
+    color: var(--creme);
+    border: none;
+    border-radius: 5px;
+    width: 150px;
+    height: 30px;
+}
+
+
+.fechar{
+    background-color: var(--marcala3);
+    color: var(--creme);
+    border: none;
+    border-radius: 5px;
+    width: 150px;
+    height: 30px;
+}
+
+@keyframes animate {
+
+    from{opacity: 1;}
+    from{opacity: 0;}
+}
+
+.bg{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: var(--marcala2);
+    display: none;
+    z-index: 9998;
+    filter: alpha(opacity=50);
+        opacity: 0.5;
+        -moz-opacity: 0.5;
+        -webkit-opacity: 0.5;
+}
+
+.text_obs{
+    resize: none;
+    background-color: var(--creme);
+    border-radius: 10px;
+}
+
+.modalTitle{
+    margin-left: 35%;
+    color: var(--creme);
+    font-family: 'Kaushan Script', cursive;
+}
+
+.btn_modal{
+    margin-left: 20%;
+}
