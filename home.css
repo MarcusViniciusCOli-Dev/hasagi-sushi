@@ -145,3 +145,26 @@ h2{
     flex-direction: row;
     justify-content: space-between;
 }
+
+/* Media Query */
+
+@media (max-width: 676px) {
+    .logo{
+        width: 15em;
+        height: 15em;
+    }
+
+    .title{
+        font-size: 4em;
+    }
+
+    .link{
+        font-size: x-large;
+    }
+  }
+
+  @media (max-width: 510px) {
+    .title{
+        font-size: 3em;
+    }
+  }

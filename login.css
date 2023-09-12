@@ -121,3 +121,18 @@ body{
     margin: 10px;
 }
 
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-width: 505px) {
+    .logo_space{
+        gap: 5%;
+    }
+
+    .entrar{
+        font-size: 15px;
+    }
+}

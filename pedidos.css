@@ -10,8 +10,9 @@
     --marcala3: #793434;
     --marcala2: #470110;
     --marcala: #590c1b;
-    --creme: #ede5cf;
+    --creme3: #d9cca9;
     --creme2: #dfd1aa;
+    --creme: #ede5cf;
     --branco: #ffffff;
     --preto: #000000;
     --vermelho: #C11B1B;
@@ -73,7 +74,22 @@ body{
     overflow-y: scroll;
 }
 
+.comandos{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.icon{
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+}
+
 .title_comanda{
+    margin: 10px;
     color: var(--creme);
     font-family: 'Kaushan Script', cursive;
     font-size: 3em;
@@ -102,6 +118,19 @@ body{
     font-family: 'JetBrains Mono', monospace;
     color: var(--creme);
 }
+
+.quant{
+  background-color: var(--transparente);
+  margin-left: 15px;
+  width: 50%;
+  border: 0;
+  border-bottom: 1px solid var(--creme);
+  outline: 0;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--creme);
+}
+
+
 
 .cliente{
     background-color: var(--transparente);
@@ -145,12 +174,13 @@ body{
 }
 
 .cardapio{
+  background: url(img/marca_dagua_senai.png);
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 67%;
     position: absolute;
-    right: 1px;
+    right: 0.1px;
 }
 
 .card{
@@ -304,6 +334,7 @@ body{
   .produto{
     display: flex;
     flex-direction: row;
+    width: 85%;
   }
 
   .textoRemove{
@@ -381,10 +412,43 @@ body{
     display: none;
     animation: animate;
     animation-duration: 600ms;
-    z-index: 9999;
+    z-index: 9990;
     border-radius: 10px;
     overflow-y: scroll;
     
+}
+
+.modal2{
+  width: 300px;
+  height: 250px;
+  background-color: var(--marcala);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  animation: animate;
+  animation-duration: 600ms;
+  z-index: 9999;
+  border-radius: 10px;
+  overflow-y: scroll;
+  
+}
+
+.modal::-webkit-scrollbar {
+  margin-left: 3px;
+  width: 10px;
+  height: 3px; /* A altura só é vista quando a rolagem é horizontal */
+}
+
+.modal::-webkit-scrollbar-track {
+  background: transparent;
+  padding: 2px;
+}
+
+.modal::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: var(--creme);
 }
 
 .contentModal{
@@ -395,6 +459,19 @@ body{
     justify-content: center;
 }
 
+.contentModal2{
+  color: var(--creme);
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.certo{
+  width: 8em;
+  height: 8em;
+}
 .enviar{
     background-color: var(--marcala3);
     color: var(--creme);
@@ -426,17 +503,49 @@ body{
     position: fixed;
     background-color: var(--marcala2);
     display: none;
-    z-index: 9998;
+    z-index: 9970;
     filter: alpha(opacity=50);
         opacity: 0.5;
         -moz-opacity: 0.5;
         -webkit-opacity: 0.5;
 }
 
+.bg2{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: var(--marcala2);
+  display: none;
+  z-index: 9970;
+  filter: alpha(opacity=50);
+      opacity: 0.5;
+      -moz-opacity: 0.5;
+      -webkit-opacity: 0.5;
+}
+
 .text_obs{
     resize: none;
     background-color: var(--creme);
     border-radius: 10px;
+    border-style: none;
+    outline-style: none;
+    border: none;
+}
+
+.text_obs::-webkit-scrollbar {
+  margin-left: 3px;
+  width: 10px;
+  height: 3px; /* A altura só é vista quando a rolagem é horizontal */
+}
+
+.text_obs::-webkit-scrollbar-track {
+  background: transparent;
+  padding: 2px;
+}
+
+.text_obs::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: var(--marcala2);
 }
 
 .modalTitle{
@@ -445,6 +554,157 @@ body{
     font-family: 'Kaushan Script', cursive;
 }
 
+.modalTitle2{
+  color: var(--creme);
+  font-family: 'Kaushan Script', cursive;
+}
+
 .btn_modal{
     margin-left: 20%;
+}
+
+.enviar:hover {
+  transform: scale(1.02);
+  transition: 0.2s;
+}
+
+@media (max-width: 1114px) {
+  .comanda{
+    width: 50%;
+  }
+
+  .cardapio{
+    width: 50%;
+    align-items: center;
+  }
+
+  
+
+  .card{
+    width: 160px;
+    height: 200px;
+  }
+
+  .preco{
+    font-size:1em;
+  }
+
+  .nome{
+    font-size:1em;
+  }
+
+
+  
+}
+
+@media (max-width: 777px) {
+
+  .btn_enviar{
+    font-size: medium;
+}
+  
+}
+
+@media (max-width: 675px) {
+  .btn_enviar{
+    font-size: medium;
+}
+.title_comanda{
+  font-size: 2em;
+}
+  
+}
+
+@media (max-width: 660px) {
+  .envio{
+    max-width: 80%;
+  }
+  
+  .form{
+    max-width: 80%;
+  }
+
+  .comandos{
+    max-width: 80%;
+  }
+
+  /*.comanda{
+    width: 60%;
+  }
+
+  .cardapio{
+    width: 40%;
+  }*/
+
+  .comidas{
+    padding: 0px;
+  }
+
+  .bebidas{
+    padding: 0px;
+  }
+
+  .card{
+    margin: 8px;
+  }
+
+
+}
+
+@media (max-width: 550px) {
+
+  .mais{
+    width: 1em;
+    height: 1em;
+  }
+  .menos{
+    width: 1em;
+    height: 0.3em;
+  }
+
+  .nomeComanda{
+    font-size: 1em;
+}
+
+  .btnRemove{
+    width: 75px;
+    height: 20px;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+  }
+  
+  .imgQuant{
+    width: 50%;
+  }
+
+  .textoRemove{
+    width: 50%;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .title_comanda{
+    font-size: 1.5em;
+  }
+  
+  .icon{
+    width: 1em;
+    height: 1em;
+  }
+
+  .nomeComanda{
+    font-size: 0.9em;
+}
+
+  .precoComanda{
+    font-size: 0.9em;
+  }
+
+  .produto{
+    width: 80%;
+  }
+
+
 }
